@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Examination Portal - Candidate Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="exam-container">
+    <div class="exam-card">
+      <div class="header">
+        <div class="badge">OES Secure Gateway</div>
+        <h1>Candidate Examination Portal</h1>
+        <p>Please enter your credentials and exam access code to begin.</p>
+      </div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="candidateId">Candidate / Roll Number</label>
+          <input type="text" id="candidateId" placeholder="e.g. CS2026-042" required autocomplete="off">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter secure password" required>
+        </div>
+
+        <div class="form-group">
+          <label for="examCode">Exam Passcode</label>
+          <input type="text" id="examCode" placeholder="6-digit passcode (e.g. EXAM99)" required>
+        </div>
+
+        <div id="statusMessage" class="status-box hidden"></div>
+
+        <button type="submit" id="submitBtn" class="btn-primary">Authenticate & Launch Exam</button>
+      </form>
+
+      <div class="footer-note">
+        <span>System Version: v1.0.0</span> &bull; <span>Secure Proctoring Enabled</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
